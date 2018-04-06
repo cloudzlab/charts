@@ -1,0 +1,19 @@
+apiVersion: v1
+entries:
+  portus:
+  - apiVersion: v1
+    created: 2018-04-06T18:40:00.482133+09:00
+    description: A Portus Helm chart for Kubernetes. Portus is an authorization and
+      user interface for the next generation of the Docker registry.
+    digest: 95fe3c909c0d7b717a3c5316b573c577e7febc5eef2fecc85cb4409fac91a768
+    home: http://port.us.org
+    maintainers:
+    - email: jbonham@suse.com
+      name: John Bonham
+    name: portus
+    sources:
+    - https://github.com/kubic-project/caasp-services/tree/master/contrib/helm-charts/Portus
+    urls:
+    - https://cloudzlab.github.io/charts/portus-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-04-06T18:40:00.479784+09:00
