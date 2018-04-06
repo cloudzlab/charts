@@ -33,6 +33,6 @@ helm repo index docs --url https://cloudzlab.github.io/charts
 
 2. Deploy
 
-```
-helm install --namespace=portus --name portus -f values.yaml portus/portus
-```
+    ```
+    helm install --namespace=portus --name portus -f values.yaml portus/portus
+    ```
