@@ -15,21 +15,21 @@ helm repo index docs --url https://cloudzlab.github.io/charts
 
 1. Edit values.yaml
 
-  Use NodePort 
+    Use NodePort 
 
-  ```
-    service:
-      type: "NodePort"
+    ```
+      service:
+        type: "NodePort"
 
-    # Docker registry url(External)
-    host: registry.com
-  ```
+      # Docker registry url(External)
+      host: registry.com
+    ```
 
-  Use Ingress
+    Use Ingress
 
-  ```
-  TBD
-  ```
+    ```
+    TBD
+    ```
 
 2. Deploy
 
