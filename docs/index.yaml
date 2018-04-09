@@ -1,8 +1,32 @@
 apiVersion: v1
 entries:
+  harbor:
+  - appVersion: 1.4.0
+    created: 2018-04-09T15:56:52.593792+09:00
+    description: An Enterprise-class Docker Registry by VMware
+    digest: 6f09399d7e79168eee7d4fc137b5d0b50acd66f0cf8044da835a9124dbc5be28
+    engine: gotpl
+    home: https://github.com/vmware/harbor
+    icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
+    keywords:
+    - vmware
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: huh@vmware.com
+      name: Jesse Hu
+    - email: username.taken@gmail.com
+      name: paulczar
+    name: harbor
+    sources:
+    - https://github.com/vmware/harbor/tree/master/contrib/helm/harbor
+    urls:
+    - https://cloudzlab.github.io/charts/harbor-0.1.1.tgz
+    version: 0.1.1
   portus:
   - apiVersion: v1
-    created: 2018-04-06T18:40:00.482133+09:00
+    created: 2018-04-09T15:56:52.596277+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 95fe3c909c0d7b717a3c5316b573c577e7febc5eef2fecc85cb4409fac91a768
@@ -16,4 +40,4 @@ entries:
     urls:
     - https://cloudzlab.github.io/charts/portus-0.1.0.tgz
     version: 0.1.0
-generated: 2018-04-06T18:40:00.479784+09:00
+generated: 2018-04-09T15:56:52.589045+09:00
