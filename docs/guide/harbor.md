@@ -1,13 +1,13 @@
-# Portus
+# Harbor
 
 ## Helm package
 
 ```
 git clone https://github.com/cloudzlab/charts.git
 cd charts
-helm dependency build portus
-helm package portus
-mv portus-x.x.x.tgz docs
+helm dependency build harbor
+helm package harbor
+mv harbor-x.x.x.tgz docs
 helm repo index docs --url https://cloudzlab.github.io/charts
 ```
 
@@ -17,16 +17,16 @@ helm repo index docs --url https://cloudzlab.github.io/charts
 # helm repo add zcp https://cloudzlab.github.io/charts
 
 # helm repo list
-NAME            URL
+NAME     	URL
 ...
-zcp             https://cloudzlab.github.io/charts
+zcp      	https://cloudzlab.github.io/charts
 
-# helm search portus 
-NAME            VERSION DESCRIPTION
-zcp/portus  	0.1.0  	A Portus Helm chart for Kubernetes. Portus is a...
+# helm search harbor
+NAME        	VERSION	DESCRIPTION
+zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
 ```
 
-## Deploy Portus Helm Chart
+## Deploy Harbor Helm Chart
 
 1. Edit values.yaml
 
