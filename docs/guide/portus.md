@@ -19,7 +19,7 @@ helm repo index docs --url https://cloudzlab.github.io/charts
 
     ```
       service:
-        type: "NodePort"
+      type: "NodePort"
 
       # Docker registry url(External)
       host: registry.com
@@ -28,7 +28,36 @@ helm repo index docs --url https://cloudzlab.github.io/charts
     Use Ingress
 
     ```
-    TBD
+      #the internal host names of the portus, registry and nginx service must be covered by the key/cert in order for TLS to work properly
+      tls:
+        enabled: true
+        key: |
+          -----BEGIN RSA PRIVATE KEY-----
+          ...
+          -----END RSA PRIVATE KEY-----
+          
+        cert: |
+          -----BEGIN CERTIFICATE-----
+          ...
+          -----END CERTIFICATE-----
+          
+      service:
+        type: "ClusterIP"
+        port: "443"
+        
+      host: registry.com
+      
+      ingress:
+        enabled: true
+      
+      annotations:
+        ingress.kubernetes.io/rewrite-target: /
+        
+      tls:
+        enabled: true
+        
+        # Secrets containing SSL key and cert must be manually created in the namespace
+        secretName: "portus-tls"
     ```
 
 2. Deploy
