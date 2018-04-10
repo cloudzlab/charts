@@ -33,6 +33,23 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     ```
     # The FQDN for Harbor service.
     externalDomain: harbor.com
+    
+    # Harbor FQDN as insecure-registries for your docker client.
+    insecureRegistry: false
+    
+    # The TLS certificate for Harbor. The common name of tlsCrt must match the externalDomain above.
+    tlsCrt: |
+      -----BEGIN CERTIFICATE-----
+      ...
+      -----END CERTIFICATE-----
+    
+    tlsKey: |
+      -----BEGIN RSA PRIVATE KEY-----
+      ...
+      -----END RSA PRIVATE KEY-----
+    
+    adminserver:
+      adminPassword: Harbor12345
     ```
 
 2. Deploy
