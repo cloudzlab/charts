@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   harbor:
   - appVersion: 1.4.0
-    created: 2018-04-12T20:44:47.811393+09:00
+    created: 2018-04-12T20:54:12.258696+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: 6f09399d7e79168eee7d4fc137b5d0b50acd66f0cf8044da835a9124dbc5be28
     engine: gotpl
@@ -26,10 +26,10 @@ entries:
     version: 0.1.1
   portus:
   - apiVersion: v1
-    created: 2018-04-12T20:44:47.815357+09:00
+    created: 2018-04-12T20:54:12.260112+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
-    digest: c5ccba6733ab492a9cef8b8559572ba2c2778b9e5324f066cdf886daa21538cc
+    digest: 06a2c813e23309ca3005c2924362ed8a1530c2f4bc17d49a8f4ce94a3961e973
     home: http://port.us.org
     maintainers:
     - email: jbonham@suse.com
@@ -38,6 +38,6 @@ entries:
     sources:
     - https://github.com/kubic-project/caasp-services/tree/master/contrib/helm-charts/Portus
     urls:
-    - https://cloudzlab.github.io/charts/portus-0.1.0_build_20180412.tgz
-    version: 0.1.0_build_20180412
-generated: 2018-04-12T20:44:47.808522+09:00
+    - https://cloudzlab.github.io/charts/portus-0.1.0.1.tgz
+    version: 0.1.0.1
+generated: 2018-04-12T20:54:12.256189+09:00
