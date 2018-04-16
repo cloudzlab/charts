@@ -30,18 +30,6 @@ zcp/portus  	0.1.0  	A Portus Helm chart for Kubernetes. Portus is a...
 
 1. Edit values.yaml
 
-    Use NodePort 
-
-    ```
-      service:
-      type: "NodePort"
-
-      # Docker registry url(External)
-      host: registry.com
-    ```
-
-    Use Ingress
-
     ```
       #the internal host names of the portus, registry and nginx service must be covered by the key/cert in order for TLS to work properly
       tls:
@@ -57,16 +45,12 @@ zcp/portus  	0.1.0  	A Portus Helm chart for Kubernetes. Portus is a...
           -----END CERTIFICATE-----
           
       service:
-        type: "ClusterIP"
-        port: "443"
+        port: "80"
         
       host: registry.com
       
       ingress:
         enabled: true
-      
-      annotations:
-        ingress.kubernetes.io/rewrite-target: /
         
       tls:
         enabled: true
