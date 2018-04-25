@@ -44,7 +44,6 @@ spec:
   - metadata:
       name: "mysql-data"
       labels:
-{{ toYaml .Values.mysql.volumes.labels | indent 8 }}
 {{ include "harbor.labels" . | indent 8 }}
     spec:
       accessModes: [{{ .Values.mysql.volumes.data.accessMode | quote }}]

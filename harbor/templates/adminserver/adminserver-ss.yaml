@@ -60,8 +60,6 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: adminserver-config
-      labels:
-{{ toYaml .Values.adminserver.volumes.labels | indent 8 }}
     spec:
       accessModes: [{{ .Values.adminserver.volumes.config.accessMode | quote }}]
       {{- if .Values.adminserver.volumes.config.storageClass }}
