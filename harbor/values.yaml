@@ -78,7 +78,6 @@ adminserver:
     timeout: "5"
     verifyCert: "True"
   ## Persist data to a persistent volume
-  existingClaim:
   volumes:
     config:
       # storageClass: "-"
@@ -182,7 +181,6 @@ mysql:
   user: "root"
   pass: "registry"
   database: "registry"
-  existingClaim:
   volumes:
     data:
       # storageClass: "-"
@@ -246,7 +244,6 @@ registry:
     Jag500bEBxqI2RLELgMt/bUdjp4N2M7mrxdrN+2579HTzb6Hviu9
     -----END CERTIFICATE-----
   ## Persist data to a persistent volume
-  existingClaim:
   volumes:
     data:
       # storageClass: "-"

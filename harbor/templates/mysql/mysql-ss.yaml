@@ -40,16 +40,6 @@ spec:
       {{- end -}}
 
   {{- if .Values.persistence.enabled }}
-
-    {{- if .Values.mysql.existingClaim }}
-
-      volumes:
-      - name: "mysql-data"
-        persistentVolumeClaim: 
-          claimName: {{ Values.mysql.existingClaim }}
-
-    {{- else }}
-
   volumeClaimTemplates:
   - metadata:
       name: "mysql-data"
@@ -68,7 +58,4 @@ spec:
       resources:
         requests:
           storage: {{ .Values.mysql.volumes.data.size | quote }}
-  
-    {{- end -}} 
-
   {{- end -}}
