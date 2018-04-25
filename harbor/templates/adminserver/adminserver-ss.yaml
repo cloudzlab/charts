@@ -57,6 +57,16 @@ spec:
           - key: secretKey
             path: key
   {{- if .Values.persistence.enabled }}
+
+    {{- if .Values.adminserver.existingClaim }}
+
+      volumes:
+      - name: adminserver-config
+        persistentVolumeClaim:
+          claimName: {{ Values.adminserver.existingClaim }}
+
+    {{- else }}
+
   volumeClaimTemplates:
   - metadata:
       name: adminserver-config
@@ -74,4 +84,7 @@ spec:
       resources:
         requests:
           storage: {{ .Values.adminserver.volumes.config.size | quote }}
+
+    {{- end -}}
+
   {{- end -}}

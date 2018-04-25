@@ -58,6 +58,16 @@ spec:
           name: "{{ template "harbor.fullname" . }}-registry"
   {{- if not .Values.registry.objectStorage }}
   {{- if .Values.persistence.enabled }}
+
+    {{- if .Values.registry.existingClaim }}
+
+      volumes:
+      - name: registry-data
+        persistentVolumeClaim:
+          claimName: {{ Values.registry.existingClaim }}
+
+    {{- else }}
+
   volumeClaimTemplates:
   - metadata:
       name: "registry-data"
@@ -76,5 +86,8 @@ spec:
       resources:
         requests:
           storage: {{ .Values.registry.volumes.data.size | quote }}
+
+    {{- end -}}
+
   {{- end -}}
   {{- end -}}

@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   catalog:
-  - created: 2018-04-25T16:29:46.537536+09:00
+  - created: 2018-04-25T17:44:47.046179+09:00
     description: service-catalog API server and controller-manager helm chart
     digest: 306e6864b7c4e3ccc8ee2b34ede90db00946301cbab91844ce3c0e9c197c47fa
     name: catalog
@@ -10,9 +10,9 @@ entries:
     version: 0.1.15
   harbor:
   - appVersion: 1.4.0
-    created: 2018-04-25T16:29:46.540055+09:00
+    created: 2018-04-25T17:44:47.048304+09:00
     description: An Enterprise-class Docker Registry by VMware
-    digest: d23d0436ed63c9db68e4fd03e705b51882be677a763138edba8f97d4f34fd9f1
+    digest: d3aa1ba0cb6f39aebbd0e34f63b8a327492a6ec2a812a6e2fb886f87f41ca308
     engine: gotpl
     home: https://github.com/vmware/harbor
     icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
@@ -34,7 +34,7 @@ entries:
     version: 0.1.1
   portus:
   - apiVersion: v1
-    created: 2018-04-25T16:29:46.544615+09:00
+    created: 2018-04-25T17:44:47.053596+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 331740ff67ac938f0dcb77f0b6f1f5cafbf5c4b7d8cbe68524d36b9a62c57a0e
@@ -49,7 +49,7 @@ entries:
     - https://cloudzlab.github.io/charts/portus-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
-    created: 2018-04-25T16:29:46.542527+09:00
+    created: 2018-04-25T17:44:47.0516+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 9ee2a12565815476dd4b0e8e8d5f09efb1addf43fbe30d2060e885ccd76aad36
@@ -64,11 +64,11 @@ entries:
     - https://cloudzlab.github.io/charts/portus-0.1.0.tgz
     version: 0.1.0
   ups-broker:
-  - created: 2018-04-25T16:29:46.545247+09:00
+  - created: 2018-04-25T17:44:47.054182+09:00
     description: user-provided service-broker deployment Helm chart.
     digest: 0abedc1d8dd30a62d6f1c2260b2a280259616372d72919ec2fda7b6ec402bee6
     name: ups-broker
     urls:
     - https://cloudzlab.github.io/charts/ups-broker-0.0.1.tgz
     version: 0.0.1
-generated: 2018-04-25T16:29:46.536194+09:00
+generated: 2018-04-25T17:44:47.044329+09:00
