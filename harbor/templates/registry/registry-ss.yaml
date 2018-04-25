@@ -62,6 +62,7 @@ spec:
   - metadata:
       name: "registry-data"
       labels:
+{{ toYaml .Values.registry.volumes.labels | indent 8 }}
 {{ include "harbor.labels" . | indent 8 }}
     spec:
       accessModes: [{{ .Values.registry.volumes.data.accessMode | quote }}]
