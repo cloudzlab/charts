@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   catalog:
-  - created: 2018-04-24T23:37:15.948265519+09:00
+  - created: 2018-04-25T16:29:46.537536+09:00
     description: service-catalog API server and controller-manager helm chart
     digest: 306e6864b7c4e3ccc8ee2b34ede90db00946301cbab91844ce3c0e9c197c47fa
     name: catalog
@@ -10,11 +10,7 @@ entries:
     version: 0.1.15
   harbor:
   - appVersion: 1.4.0
-<<<<<<< HEAD
-    created: 2018-04-24T23:37:15.952109063+09:00
-=======
-    created: 2018-04-25T16:19:00.384519+09:00
->>>>>>> Update harbor chart. Add label attr to volumes.
+    created: 2018-04-25T16:29:46.540055+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: d23d0436ed63c9db68e4fd03e705b51882be677a763138edba8f97d4f34fd9f1
     engine: gotpl
@@ -38,11 +34,7 @@ entries:
     version: 0.1.1
   portus:
   - apiVersion: v1
-<<<<<<< HEAD
-    created: 2018-04-24T23:37:15.955520565+09:00
-=======
-    created: 2018-04-25T16:19:00.389897+09:00
->>>>>>> Update harbor chart. Add label attr to volumes.
+    created: 2018-04-25T16:29:46.544615+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 331740ff67ac938f0dcb77f0b6f1f5cafbf5c4b7d8cbe68524d36b9a62c57a0e
@@ -57,11 +49,7 @@ entries:
     - https://cloudzlab.github.io/charts/portus-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
-<<<<<<< HEAD
-    created: 2018-04-24T23:37:15.953769487+09:00
-=======
-    created: 2018-04-25T16:19:00.387348+09:00
->>>>>>> Update harbor chart. Add label attr to volumes.
+    created: 2018-04-25T16:29:46.542527+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 9ee2a12565815476dd4b0e8e8d5f09efb1addf43fbe30d2060e885ccd76aad36
@@ -75,16 +63,12 @@ entries:
     urls:
     - https://cloudzlab.github.io/charts/portus-0.1.0.tgz
     version: 0.1.0
-<<<<<<< HEAD
   ups-broker:
-  - created: 2018-04-24T23:37:15.955837126+09:00
+  - created: 2018-04-25T16:29:46.545247+09:00
     description: user-provided service-broker deployment Helm chart.
     digest: 0abedc1d8dd30a62d6f1c2260b2a280259616372d72919ec2fda7b6ec402bee6
     name: ups-broker
     urls:
     - https://cloudzlab.github.io/charts/ups-broker-0.0.1.tgz
     version: 0.0.1
-generated: 2018-04-24T23:37:15.945258467+09:00
-=======
-generated: 2018-04-25T16:19:00.382137+09:00
->>>>>>> Update harbor chart. Add label attr to volumes.
+generated: 2018-04-25T16:29:46.536194+09:00
