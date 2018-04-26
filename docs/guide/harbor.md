@@ -32,7 +32,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
 
     ```
     # The FQDN for Harbor service.
-    externalDomain: harbor.com
+    externalDomain: harbor.example.com
     
     # Harbor FQDN as insecure-registries for your docker client.
     insecureRegistry: false
@@ -57,3 +57,88 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     ```
     helm install --namespace=harbor --name harbor -f values.yaml zcp/harbor
     ```
+    
+3. Optional
+
+3.1. To use Persistent Volume
+
+```
+## This will be applied to global
+persistence:
+  enabled: true
+  
+adminserver:
+  ...
+  volumes:
+    config:
+      storageClass: "ibmc-block-bronze"
+      accessMode: ReadWriteOnce
+      size: 20Gi
+
+mysql:
+  ...
+  volumes:
+    data:
+      storageClass: "ibmc-block-bronze"
+      accessMode: ReadWriteOnce
+      size: 20Gi
+      
+registry:
+  ...
+  volumes:
+    data:
+      storageClass: "ibmc-block-bronze"
+      accessMode: ReadWriteOnce
+      size: 20Gi
+      
+```
+
+3.2. To user more client-max-body-size
+
+```
+ingress:
+  annotations:
+    ...
+    nginx.org/client-max-body-size: "900m"
+```
+
+3.3. To change POD's resource
+
+````
+adminserver:
+  ...
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+      
+ui:
+  ...
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+
+mysql:
+  ...
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+      
+registry:
+  ...
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+      
+clair:
+  ...
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+      
+```
+
