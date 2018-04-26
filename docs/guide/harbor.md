@@ -60,85 +60,85 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     
 3. Optional
 
-3.1. To use Persistent Volume
+    3.1. To use Persistent Volume
 
-```
-## This will be applied to global
-persistence:
-  enabled: true
-  
-adminserver:
-  ...
-  volumes:
-    config:
-      storageClass: "ibmc-block-bronze"
-      accessMode: ReadWriteOnce
-      size: 20Gi
+    ```
+    ## This will be applied to global
+    persistence:
+      enabled: true
 
-mysql:
-  ...
-  volumes:
-    data:
-      storageClass: "ibmc-block-bronze"
-      accessMode: ReadWriteOnce
-      size: 20Gi
-      
-registry:
-  ...
-  volumes:
-    data:
-      storageClass: "ibmc-block-bronze"
-      accessMode: ReadWriteOnce
-      size: 20Gi
-      
-```
+    adminserver:
+      ...
+      volumes:
+        config:
+          storageClass: "ibmc-block-bronze"
+          accessMode: ReadWriteOnce
+          size: 20Gi
 
-3.2. To user more client-max-body-size
+    mysql:
+      ...
+      volumes:
+        data:
+          storageClass: "ibmc-block-bronze"
+          accessMode: ReadWriteOnce
+          size: 20Gi
 
-```
-ingress:
-  annotations:
-    ...
-    nginx.org/client-max-body-size: "900m"
-```
+    registry:
+      ...
+      volumes:
+        data:
+          storageClass: "ibmc-block-bronze"
+          accessMode: ReadWriteOnce
+          size: 20Gi
 
-3.3. To change POD's resource
+    ```
 
-````
-adminserver:
-  ...
-  resources:
-    requests:
-      memory: 256Mi
-      cpu: 100m
-      
-ui:
-  ...
-  resources:
-    requests:
-      memory: 256Mi
-      cpu: 100m
+    3.2. To user more client-max-body-size
 
-mysql:
-  ...
-  resources:
-    requests:
-      memory: 256Mi
-      cpu: 100m
-      
-registry:
-  ...
-  resources:
-    requests:
-      memory: 256Mi
-      cpu: 100m
-      
-clair:
-  ...
-  resources:
-    requests:
-      memory: 256Mi
-      cpu: 100m
-      
-```
+    ```
+    ingress:
+      annotations:
+        ...
+        nginx.org/client-max-body-size: "900m"
+    ```
+
+    3.3. To change POD's resource
+
+    ````
+    adminserver:
+      ...
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 100m
+
+    ui:
+      ...
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 100m
+
+    mysql:
+      ...
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 100m
+
+    registry:
+      ...
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 100m
+
+    clair:
+      ...
+      resources:
+        requests:
+          memory: 256Mi
+          cpu: 100m
+
+    ```
 
