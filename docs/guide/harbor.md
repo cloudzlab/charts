@@ -63,7 +63,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     3.1. To use Persistent Volume
 
     ```
-    ## This will be applied to global
+    ## This will be applied to global except for postgresql
     persistence:
       enabled: true
 
@@ -71,7 +71,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
       ...
       volumes:
         config:
-          storageClass: "ibmc-block-bronze"
+          storageClass: "STORAGE_CLASS_NAME"
           accessMode: ReadWriteOnce
           size: 20Gi
 
@@ -79,7 +79,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
       ...
       volumes:
         data:
-          storageClass: "ibmc-block-bronze"
+          storageClass: "STORAGE_CLASS_NAME"
           accessMode: ReadWriteOnce
           size: 20Gi
 
@@ -87,10 +87,18 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
       ...
       volumes:
         data:
-          storageClass: "ibmc-block-bronze"
+          storageClass: "STORAGE_CLASS_NAME"
           accessMode: ReadWriteOnce
           size: 20Gi
-
+          
+    postgresql:
+      ...
+      persistence:
+        enabled: true
+        storageClass: "STORAGE_CLASS_NAME"
+        accessMode: ReadWriteOnce
+        size: 20Gi
+        
     ```
 
     3.2. To user more client-max-body-size
