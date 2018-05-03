@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   catalog:
-  - created: 2018-05-03T14:19:17.592455+09:00
+  - created: 2018-05-03T16:21:42.273612+09:00
     description: service-catalog API server and controller-manager helm chart
     digest: 306e6864b7c4e3ccc8ee2b34ede90db00946301cbab91844ce3c0e9c197c47fa
     name: catalog
@@ -10,7 +10,7 @@ entries:
     version: 0.1.15
   harbor:
   - appVersion: 1.4.0
-    created: 2018-05-03T14:19:17.594527+09:00
+    created: 2018-05-03T16:21:42.275323+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: 1888f148f3e79558153a95a783e77cc3f01ff05e2a175bd9462561e6f2ef9a13
     engine: gotpl
@@ -34,7 +34,7 @@ entries:
     version: 0.1.1
   portus:
   - apiVersion: v1
-    created: 2018-05-03T14:19:17.597988+09:00
+    created: 2018-05-03T16:21:42.277074+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 04476e51673f4ccd348c2e2352d4f2d0121f05d98379a6c80e9ef302ac8903be
@@ -48,27 +48,12 @@ entries:
     urls:
     - https://cnpst.github.io/charts/portus-0.1.2.tgz
     version: 0.1.2
-  - apiVersion: v1
-    created: 2018-05-03T14:19:17.596107+09:00
-    description: A Portus Helm chart for Kubernetes. Portus is an authorization and
-      user interface for the next generation of the Docker registry.
-    digest: 9ee2a12565815476dd4b0e8e8d5f09efb1addf43fbe30d2060e885ccd76aad36
-    home: http://port.us.org
-    maintainers:
-    - email: jbonham@suse.com
-      name: John Bonham
-    name: portus
-    sources:
-    - https://github.com/kubic-project/caasp-services/tree/master/contrib/helm-charts/Portus
-    urls:
-    - https://cnpst.github.io/charts/portus-0.1.0.tgz
-    version: 0.1.0
   ups-broker:
-  - created: 2018-05-03T14:19:17.598336+09:00
+  - created: 2018-05-03T16:21:42.277713+09:00
     description: user-provided service-broker deployment Helm chart.
     digest: 0abedc1d8dd30a62d6f1c2260b2a280259616372d72919ec2fda7b6ec402bee6
     name: ups-broker
     urls:
     - https://cnpst.github.io/charts/ups-broker-0.0.1.tgz
     version: 0.0.1
-generated: 2018-05-03T14:19:17.591639+09:00
+generated: 2018-05-03T16:21:42.272174+09:00
