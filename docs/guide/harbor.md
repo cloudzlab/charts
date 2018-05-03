@@ -3,23 +3,23 @@
 ## Helm package
 
 ```
-git clone https://github.com/cloudzlab/charts.git
+git clone https://github.com/cnpst/charts.git
 cd charts
 helm dependency build harbor
 helm package harbor
 mv harbor-x.x.x.tgz docs
-helm repo index docs --url https://cloudzlab.github.io/charts
+helm repo index docs --url https://cnpst.github.io/charts
 ```
 
 ## Add Helm repository
 
 ```
-# helm repo add zcp https://cloudzlab.github.io/charts
+# helm repo add zcp https://cnpst.github.io/charts
 
 # helm repo list
 NAME     	URL
 ...
-zcp      	https://cloudzlab.github.io/charts
+zcp      	https://cnpst.github.io/charts
 
 # helm search harbor
 NAME        	VERSION	DESCRIPTION
@@ -33,21 +33,21 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     ```
     # The FQDN for Harbor service.
     externalDomain: harbor.example.com
-    
+
     # Harbor FQDN as insecure-registries for your docker client.
     insecureRegistry: false
-    
+
     # The TLS certificate for Harbor. The common name of tlsCrt must match the externalDomain above.
     tlsCrt: |
       -----BEGIN CERTIFICATE-----
       ...
       -----END CERTIFICATE-----
-    
+
     tlsKey: |
       -----BEGIN RSA PRIVATE KEY-----
       ...
       -----END RSA PRIVATE KEY-----
-    
+
     adminserver:
       adminPassword: Harbor12345
     ```
@@ -57,7 +57,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
     ```
     helm install --namespace=harbor --name harbor -f values.yaml zcp/harbor
     ```
-    
+
 3. Optional
 
     3.1. To use Persistent Volume
@@ -90,7 +90,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
           storageClass: "STORAGE_CLASS_NAME"
           accessMode: ReadWriteOnce
           size: 20Gi
-          
+
     postgresql:
       ...
       persistence:
@@ -98,7 +98,7 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
         storageClass: "STORAGE_CLASS_NAME"
         accessMode: ReadWriteOnce
         size: 20Gi
-        
+
     ```
 
     3.2. To user more client-max-body-size
@@ -149,4 +149,3 @@ zcp/harbor  	0.1.1  	An Enterprise-class Docker Registry by VMware
           cpu: 100m
 
     ```
-

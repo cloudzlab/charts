@@ -3,25 +3,25 @@
 ## Helm package
 
 ```
-git clone https://github.com/cloudzlab/charts.git
+git clone https://github.com/cnpst/charts.git
 cd charts
 helm dependency build portus
 helm package portus
 mv portus-x.x.x.tgz docs
-helm repo index docs --url https://cloudzlab.github.io/charts
+helm repo index docs --url https://cnpst.github.io/charts
 ```
 
 ## Add Helm repository
 
 ```
-# helm repo add zcp https://cloudzlab.github.io/charts
+# helm repo add zcp https://cnpst.github.io/charts
 
 # helm repo list
 NAME            URL
 ...
-zcp             https://cloudzlab.github.io/charts
+zcp             https://cnpst.github.io/charts
 
-# helm search portus 
+# helm search portus
 NAME            VERSION DESCRIPTION
 zcp/portus  	0.1.0  	A Portus Helm chart for Kubernetes. Portus is a...
 ```
@@ -87,7 +87,7 @@ zcp/portus  	0.1.0  	A Portus Helm chart for Kubernetes. Portus is a...
       # If a domain (e.g. mycompany.com) is set, then only signups with email from this domain are allowed.
       domain: ""
     ```
-    
+
 ## Deploy
 
     ```
