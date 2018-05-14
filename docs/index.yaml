@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   harbor:
   - appVersion: 1.4.0
-    created: 2018-05-14T14:15:30.132683+09:00
+    created: 2018-05-14T14:36:15.099034+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: 1888f148f3e79558153a95a783e77cc3f01ff05e2a175bd9462561e6f2ef9a13
     engine: gotpl
@@ -26,7 +26,7 @@ entries:
     version: 0.1.1
   portus:
   - apiVersion: v1
-    created: 2018-05-14T14:15:30.135897+09:00
+    created: 2018-05-14T14:36:15.100717+09:00
     description: A Portus Helm chart for Kubernetes. Portus is an authorization and
       user interface for the next generation of the Docker registry.
     digest: 04476e51673f4ccd348c2e2352d4f2d0121f05d98379a6c80e9ef302ac8903be
@@ -40,4 +40,28 @@ entries:
     urls:
     - https://cnpst.github.io/charts/portus-0.1.2.tgz
     version: 0.1.2
-generated: 2018-05-14T14:15:30.126615+09:00
+  zcp-registry:
+  - appVersion: 1.4.0
+    created: 2018-05-14T14:36:15.105275+09:00
+    description: An Enterprise-class Docker Registry by VMware
+    digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
+    engine: gotpl
+    home: https://github.com/vmware/harbor
+    icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
+    keywords:
+    - vmware
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: huh@vmware.com
+      name: Jesse Hu
+    - email: username.taken@gmail.com
+      name: paulczar
+    name: zcp-registry
+    sources:
+    - https://github.com/vmware/harbor/tree/master/contrib/helm/harbor
+    urls:
+    - https://cnpst.github.io/charts/zcp-registry-0.1.1.tgz
+    version: 0.1.1
+generated: 2018-05-14T14:36:15.096658+09:00
