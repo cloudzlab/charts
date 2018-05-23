@@ -1,8 +1,31 @@
 apiVersion: v1
 entries:
   zcp-registry:
+  - appVersion: 1.5.0
+    created: 2018-05-24T01:29:57.199853+09:00
+    description: An Enterprise-class Docker Registry by VMware
+    digest: 8517b0106842366ccfa472279a8fd3d1d24994cc84d228fb928754f751378733
+    engine: gotpl
+    home: https://github.com/vmware/harbor
+    icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
+    keywords:
+    - vmware
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: huh@vmware.com
+      name: Jesse Hu
+    - email: username.taken@gmail.com
+      name: paulczar
+    name: zcp-registry
+    sources:
+    - https://github.com/vmware/harbor/tree/master/contrib/helm/harbor
+    urls:
+    - https://cnpst.github.io/charts/zcp-registry-0.2.0.tgz
+    version: 0.2.0
   - appVersion: 1.4.0
-    created: 2018-05-23T11:55:56.325971+09:00
+    created: 2018-05-24T01:29:57.193204+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
     engine: gotpl
@@ -27,7 +50,7 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2018-05-23T11:55:56.32658+09:00
+    created: 2018-05-24T01:29:57.201614+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -45,4 +68,4 @@ entries:
     urls:
     - https://cnpst.github.io/charts/zcp-sso-0.0.1.tgz
     version: 0.0.1
-generated: 2018-05-23T11:55:56.31974+09:00
+generated: 2018-05-24T01:29:57.18344+09:00
