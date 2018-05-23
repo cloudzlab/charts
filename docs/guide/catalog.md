@@ -61,7 +61,7 @@ zcp/zcp-registry  	x.x.x  	 xxx
 
 3. Optional
 
-    - To use Persistent Volume
+    3.1. To use Persistent Volume
 
     ```
     ## This will be applied to global except for postgresql
@@ -102,7 +102,7 @@ zcp/zcp-registry  	x.x.x  	 xxx
 
     ```
 
-    - To user more client-max-body-size
+    3.2. To user more client-max-body-size
 
     ```
     ingress:
@@ -111,7 +111,7 @@ zcp/zcp-registry  	x.x.x  	 xxx
         nginx.org/client-max-body-size: "900m"
     ```
 
-    - To change POD's resource
+    3.3. To change POD's resource
 
     ````
     adminserver:
