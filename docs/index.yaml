@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   zcp-registry:
   - appVersion: 1.4.0
-    created: 2018-05-23T11:27:33.366773+09:00
+    created: 2018-05-23T11:55:56.325971+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
     engine: gotpl
@@ -27,9 +27,9 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2018-05-23T11:27:33.368086+09:00
+    created: 2018-05-23T11:55:56.32658+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
-    digest: 3b5c663f0b24c107cf8fffa240260e10e4568ecffaf552af8d1ccc959a8ca54b
+    digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
     icon: http://www.keycloak.org/resources/images/keycloak_logo_480x108.png
     keywords:
@@ -41,8 +41,8 @@ entries:
       name: yunsangjun
     name: zcp-sso
     sources:
-    - https://github.com/jboss-dockerfiles/keycloak/tree/master/proxy
+    - https://github.com/YunSangJun/charts/tree/master/incubator/keycloak-proxy
     urls:
     - https://cnpst.github.io/charts/zcp-sso-0.0.1.tgz
     version: 0.0.1
-generated: 2018-05-23T11:27:33.359571+09:00
+generated: 2018-05-23T11:55:56.31974+09:00
