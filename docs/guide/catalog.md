@@ -1,14 +1,14 @@
-# ZCP Registry
+# ZCP Catalog
 
 ## Helm package
 
 ```
-git clone https://github.com/cnpst/zcp-registry.git
-helm dependency build zcp-registry
-helm package zcp-registry
+git clone https://github.com/cnpst/zcp-catalog.git
+helm dependency build zcp-catalog
+helm package zcp-catalog
 
 git clone https://cnpst.github.io/charts
-mv zcp-registry-x.x.x.tgz charts/docs
+mv zcp-catalog-x.x.x.tgz charts/docs
 helm repo index charts/docs --url https://cnpst.github.io/charts
 ```
 
@@ -22,131 +22,79 @@ NAME     	URL
 ...
 zcp      	https://cnpst.github.io/charts
 
-# helm search zcp-registry
+# helm search zcp-catalog
 NAME        	    VERSION	 DESCRIPTION
-zcp/zcp-registry  	x.x.x  	 xxx
+zcp/zcp-catalog  	x.x.x  	 xxx
 ```
 
-## Deploy ZCP Registry Helm Chart
+## Deploy ZCP Catalog Helm Chart
 
 1. Edit values.yaml
 
     ```
-    # The FQDN for ZCP Registry service.
-    externalDomain: registry.example.com
+    api:
+      replicaCount: 1
 
-    # ZCP Registry FQDN as insecure-registries for your docker client.
-    insecureRegistry: false
+    ui:
+      appName: ZCP Catalog
 
-    # The TLS certificate for ZCP Registry. The common name of tlsCrt must match the externalDomain above.
-    tlsCrt: |
-      -----BEGIN CERTIFICATE-----
-      ...
-      -----END CERTIFICATE-----
+    ingress:
+      enabled: true
+      hosts:
+        - catalog.example.com
+      annotations:
+        ingress.kubernetes.io/rewrite-target: /  
+      tls:
+        secretName: catalog-tls
 
-    tlsKey: |
-      -----BEGIN RSA PRIVATE KEY-----
-      ...
-      -----END RSA PRIVATE KEY-----
-
-    adminserver:
-      adminPassword: Registry12345
+    mongodb:
+      persistence:
+        enabled: false
     ```
 
 2. Deploy
 
     ```
-    helm install --namespace=zcp-registry --name zcp-registry -f values.yaml zcp/zcp-registry
+    helm install --namespace=zcp-catalog --name zcp-catalog -f values.yaml zcp/zcp-catalog
     ```
 
 3. Optional
 
-    3.1. To use Persistent Volume
+    - To use Persistent Volume
 
     ```
-    ## This will be applied to global except for postgresql
-    persistence:
-      enabled: true
-
-    adminserver:
-      ...
-      volumes:
-        config:
-          storageClass: "STORAGE_CLASS_NAME"
-          accessMode: ReadWriteOnce
-          size: 20Gi
-
-    mysql:
-      ...
-      volumes:
-        data:
-          storageClass: "STORAGE_CLASS_NAME"
-          accessMode: ReadWriteOnce
-          size: 20Gi
-
-    registry:
-      ...
-      volumes:
-        data:
-          storageClass: "STORAGE_CLASS_NAME"
-          accessMode: ReadWriteOnce
-          size: 20Gi
-
-    postgresql:
-      ...
+    mongodb:
       persistence:
         enabled: true
         storageClass: "STORAGE_CLASS_NAME"
         accessMode: ReadWriteOnce
         size: 20Gi
-
     ```
 
-    3.2. To user more client-max-body-size
-
-    ```
-    ingress:
-      annotations:
-        ...
-        nginx.org/client-max-body-size: "900m"
-    ```
-
-    3.3. To change POD's resource
+    - To change POD's resource
 
     ````
-    adminserver:
-      ...
+    api:
       resources:
-        requests:
-          memory: 256Mi
+        limits:
           cpu: 100m
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 128Mi
 
     ui:
-      ...
+      resources:
+        limits:
+          cpu: 100m
+          memory: 128Mi
+        requests:
+          cpu: 100m
+          memory: 128Mi
+
+    prerender:
       resources:
         requests:
-          memory: 256Mi
           cpu: 100m
-
-    mysql:
-      ...
-      resources:
-        requests:
-          memory: 256Mi
-          cpu: 100m
-
-    registry:
-      ...
-      resources:
-        requests:
-          memory: 256Mi
-          cpu: 100m
-
-    clair:
-      ...
-      resources:
-        requests:
-          memory: 256Mi
-          cpu: 100m
-
+          memory: 128Mi
     ```
