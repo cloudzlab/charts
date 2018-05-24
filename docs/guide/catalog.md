@@ -116,39 +116,39 @@ zcp/zcp-catalog  	x.x.x  	 xxx
     
     - To use Persistent Volume
 
-    ```
-    mongodb:
-      persistence:
-        enabled: true
-        storageClass: "STORAGE_CLASS_NAME"
-        accessMode: ReadWriteOnce
-        size: 20Gi
-    ```
+        ```
+        mongodb:
+          persistence:
+            enabled: true
+            storageClass: "STORAGE_CLASS_NAME"
+            accessMode: ReadWriteOnce
+            size: 20Gi
+        ```
 
     - To change POD's resource
 
-    ````
-    api:
-      resources:
-        limits:
-          cpu: 100m
-          memory: 128Mi
-        requests:
-          cpu: 100m
-          memory: 128Mi
+        ````
+        api:
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
 
-    ui:
-      resources:
-        limits:
-          cpu: 100m
-          memory: 128Mi
-        requests:
-          cpu: 100m
-          memory: 128Mi
+        ui:
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
 
-    prerender:
-      resources:
-        requests:
-          cpu: 100m
-          memory: 128Mi
-    ```
+        prerender:
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+        ```
