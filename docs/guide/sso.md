@@ -28,7 +28,7 @@ zcp/zcp-sso     	x.x.x  	 xxx
 
 ## Deploy ZCP SSO Helm Chart
 
-1. Edit values.yaml
+1. Create values.yaml
 
     ```
     ingress:
@@ -38,7 +38,7 @@ zcp/zcp-sso     	x.x.x  	 xxx
       hosts:
         - sso.example.com
       tls:
-        - secretName: sso-tls
+        - secretName: example-tls
           hosts:
             - sso.example.com
 
@@ -51,6 +51,12 @@ zcp/zcp-sso     	x.x.x  	 xxx
       secret: CLIENT_SECRET
       pattern: /admin
       rolesAllowed: admin
+    ```
+
+2. Create secret
+
+    ```
+    $ kubectl create secret tls example-tls --cert example.crt --key example.key
     ```
 
 2. Deploy

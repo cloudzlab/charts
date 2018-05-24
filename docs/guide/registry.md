@@ -29,7 +29,7 @@ zcp/zcp-registry  	x.x.x  	 xxx
 
 ## Deploy ZCP Registry Helm Chart
 
-1. Edit values.yaml
+1. Create values.yaml
 
     ```
     # The FQDN for ZCP Registry service.
