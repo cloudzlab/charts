@@ -68,49 +68,51 @@ zcp/zcp-catalog  	x.x.x  	 xxx
 
     - To use zcp sso
     
-    Deploy zcp sso helm chart. User who has "admin" role is able to access zcp-catalog ui with below config.<br>
-    Refer to [ZCP SSO Helm Chart](https://github.com/cnpst/zcp-sso) for more information.
-    ```
-    helm install --name zcp-sso-for-catalog -f values.yaml zcp/zcp-sso
+        Deploy zcp sso helm chart. User who has "admin" role is able to access zcp-catalog ui with below config.<br>
+        Refer to [ZCP SSO Helm Chart](https://github.com/cnpst/zcp-sso) for more information.
+        
+        ```
+        helm install --name zcp-sso-for-catalog -f values.yaml zcp/zcp-sso
+
+        <values.yaml>
+        configmap:
+          targetUrl: "http://zcp-catalog-zcp-catalog-ui"
+          realm: REALM_NAME
+          realmPublicKey: "REALM_PUBLIC_KEY"
+          authServerUrl: http://url-to-keycloak.example.com/auth
+          resource: CLIENT_ID
+          secret: CLIENT_SECRET
+          pattern: /*
+          rolesAllowed: admin
+        ```
     
-    <values.yaml>
-    configmap:
-      targetUrl: "http://zcp-catalog-zcp-catalog-ui"
-      realm: REALM_NAME
-      realmPublicKey: "REALM_PUBLIC_KEY"
-      authServerUrl: http://url-to-keycloak.example.com/auth
-      resource: CLIENT_ID
-      secret: CLIENT_SECRET
-      pattern: /*
-      rolesAllowed: admin
-    ```
+        Edit zcp-catalog ingress.
     
-    Edit zcp-catalog ingress.
-    ```
-    $ kubectl edit zcp-catalog-zcp-catalog
-    ...
-    spec:
-      rules:
-      - host: catalog.example.com
-        http:
-          paths:
-          - backend:
-              serviceName: zcp-sso-for-catalog
-              servicePort: 80
-            path: /
-          - backend:
-              serviceName: zcp-catalog-zcp-catalog-ui
-              servicePort: 80
-            path: /ui
-          - backend:
-              serviceName: zcp-catalog-zcp-catalog-api
-              servicePort: 80
-            path: /api/
-      tls:
-      - hosts:
-        - catalog.example.com
-        secretName: example-tls
-    ```
+        ```
+        $ kubectl edit zcp-catalog-zcp-catalog
+        ...
+        spec:
+          rules:
+          - host: catalog.example.com
+            http:
+              paths:
+              - backend:
+                  serviceName: zcp-sso-for-catalog
+                  servicePort: 80
+                path: /
+              - backend:
+                  serviceName: zcp-catalog-zcp-catalog-ui
+                  servicePort: 80
+                path: /ui
+              - backend:
+                  serviceName: zcp-catalog-zcp-catalog-api
+                  servicePort: 80
+                path: /api/
+          tls:
+          - hosts:
+            - catalog.example.com
+            secretName: example-tls
+        ```
     
     - To use Persistent Volume
 
