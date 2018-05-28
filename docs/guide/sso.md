@@ -6,7 +6,7 @@
 git clone https://github.com/cnpst/zcp-sso.git
 helm package zcp-sso
 
-git clone https://cnpst.github.io/charts
+git clone https://github.com/cnpst/charts
 mv zcp-sso-x.x.x.tgz charts/docs
 helm repo index charts/docs --url https://cnpst.github.io/charts
 ```
