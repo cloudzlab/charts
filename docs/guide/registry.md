@@ -108,11 +108,11 @@ zcp/zcp-registry  	x.x.x  	 xxx
     registry:
       objectStorage:
         s3:
-          region: "seo-ap-geo"
-          regionendpoint: "s3.seo-ap-geo.objectstorage.softlayer.net"
-          accesskey: "QhyyzenHL1HdGnjHsf7V"
-          secretkey: "C5gQaqcx2L2dpVlrUJsRrbdSPf3gjJz6VjXxrl5i"
-          bucket: "zcp-registry"
+          region: "example_region"
+          regionendpoint: "example_endpoint"
+          accesskey: "example_accesskey"
+          secretkey: "example_secretkey"
+          bucket: "example_bucket"
           encrypt: "true"
     ```
 
