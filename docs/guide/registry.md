@@ -101,8 +101,22 @@ zcp/zcp-registry  	x.x.x  	 xxx
         size: 20Gi
 
     ```
+    
+    - To use object storage for registry backend
 
-    - To user more client-max-body-size
+    ```
+    registry:
+      objectStorage:
+        s3:
+          region: "seo-ap-geo"
+          regionendpoint: "s3.seo-ap-geo.objectstorage.softlayer.net"
+          accesskey: "QhyyzenHL1HdGnjHsf7V"
+          secretkey: "C5gQaqcx2L2dpVlrUJsRrbdSPf3gjJz6VjXxrl5i"
+          bucket: "zcp-registry"
+          encrypt: "true"
+    ```
+
+    - To use more client-max-body-size
 
     ```
     ingress:
