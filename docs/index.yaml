@@ -1,9 +1,28 @@
 apiVersion: v1
 entries:
+  elasticsearch-exporter:
+  - apiVersion: v1
+    appVersion: 1.0.2
+    created: 2018-07-03T15:30:40.826503906+09:00
+    description: Elasticsearch stats exporter for Prometheus
+    digest: 03692d3f3768c9a4b34e236fd44392bef43a848f470a6d3016f1dd364312485a
+    keywords:
+    - metrics
+    - elasticsearch
+    - monitoring
+    maintainers:
+    - email: sven.mueller@commercetools.com
+      name: svenmueller
+    name: elasticsearch-exporter
+    sources:
+    - https://github.com/justwatchcom/elasticsearch_exporter
+    urls:
+    - https://cnpst.github.io/charts/elasticsearch-exporter-0.1.1.tgz
+    version: 0.1.1
   zcp-catalog:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2018-06-15T02:34:44.355662+09:00
+    created: 2018-07-03T15:30:40.829473556+09:00
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 7ae6072bb023944ff2aa9ade68bb2ef08933ed72f4d7ae352bb15d872b0b9386
     home: https://github.com/kubernetes-helm/monocular
@@ -18,7 +37,7 @@ entries:
     version: 0.5.2
   zcp-registry:
   - appVersion: 1.5.0
-    created: 2018-06-15T02:34:44.367024+09:00
+    created: 2018-07-03T15:30:40.835774437+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: a4c8bc60d9433ba32d3fc5d3913ec9f5372ef014727db142ccd947c14b8fcea6
     engine: gotpl
@@ -41,7 +60,7 @@ entries:
     - https://cnpst.github.io/charts/zcp-registry-0.2.0.tgz
     version: 0.2.0
   - appVersion: 1.4.0
-    created: 2018-06-15T02:34:44.361821+09:00
+    created: 2018-07-03T15:30:40.832887251+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
     engine: gotpl
@@ -66,7 +85,7 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2018-06-15T02:34:44.368782+09:00
+    created: 2018-07-03T15:30:40.836450919+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -84,4 +103,4 @@ entries:
     urls:
     - https://cnpst.github.io/charts/zcp-sso-0.0.1.tgz
     version: 0.0.1
-generated: 2018-06-15T02:34:44.352755+09:00
+generated: 2018-07-03T15:30:40.825969413+09:00
