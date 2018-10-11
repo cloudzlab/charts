@@ -3,7 +3,7 @@ entries:
   elasticsearch-exporter:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2018-09-16T15:37:21.435165367+09:00
+    created: 2018-10-11T18:47:14.5771054+09:00
     description: Elasticsearch stats exporter for Prometheus
     digest: bde7b657d333af2b8b319e6a7bde32f22c4c96953d1890e6852a875d5c51d2b2
     keywords:
@@ -22,7 +22,22 @@ entries:
   zcp-catalog:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2018-09-16T15:37:21.435911982+09:00
+    created: 2018-10-11T18:47:14.5796054+09:00
+    description: Monocular is a search and discovery front end for Helm Charts Repositories.
+    digest: 4ca3410579fbae3f7236beb3bd5d57f7b8cc245bcca5000b310ddddad7a9e29d
+    home: https://github.com/kubernetes-helm/monocular
+    maintainers:
+    - email: adnan@bitnami.com
+      name: prydonius
+    name: zcp-catalog
+    sources:
+    - https://github.com/kubernetes-helm/monocular
+    urls:
+    - https://cnpst.github.io/charts/zcp-catalog-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: v0.6.2
+    created: 2018-10-11T18:47:14.5781054+09:00
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 7ae6072bb023944ff2aa9ade68bb2ef08933ed72f4d7ae352bb15d872b0b9386
     home: https://github.com/kubernetes-helm/monocular
@@ -38,9 +53,9 @@ entries:
   zcp-gitea:
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2018-09-16T15:37:21.437297361+09:00
+    created: 2018-10-11T18:47:14.5866054+09:00
     description: Gitea - Git with a cup of tea
-    digest: 32511d415765ba4a2e8e153c457efa540ea69d675e65870255a8c933c41a90a2
+    digest: bf3950139dcc1c6a802d5a8f724a7433cf6001efffecdf1d90fc339d3a424757
     home: https://github.com/go-gitea/gitea
     icon: https://raw.githubusercontent.com/go-gitea/gitea/master/public/img/favicon.ico
     keywords:
@@ -51,7 +66,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2018-09-16T15:37:21.436605238+09:00
+    created: 2018-10-11T18:47:14.5816054+09:00
     description: Gitea - Git with a cup of tea
     digest: f9cec764bd45af7a4f81b545e52dc79be039101ac2320c78cbb4fe5817a61dc2
     home: https://github.com/go-gitea/gitea
@@ -64,7 +79,30 @@ entries:
     version: 0.6.0
   zcp-registry:
   - appVersion: 1.5.0
-    created: 2018-09-16T15:37:21.44129372+09:00
+    created: 2018-10-11T18:47:14.6011054+09:00
+    description: An Enterprise-class Docker Registry by VMware
+    digest: afdabfa608c7f35f9c05bb5eefe39d9271701c4e0d7c5a2f8b1ac42e4cfd3282
+    engine: gotpl
+    home: https://github.com/vmware/harbor
+    icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
+    keywords:
+    - vmware
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: huh@vmware.com
+      name: Jesse Hu
+    - email: username.taken@gmail.com
+      name: paulczar
+    name: zcp-registry
+    sources:
+    - https://github.com/vmware/harbor/tree/master/contrib/helm/harbor
+    urls:
+    - https://cnpst.github.io/charts/zcp-registry-1.0.0.tgz
+    version: 1.0.0
+  - appVersion: 1.5.0
+    created: 2018-10-11T18:47:14.5946054+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: a4c8bc60d9433ba32d3fc5d3913ec9f5372ef014727db142ccd947c14b8fcea6
     engine: gotpl
@@ -87,7 +125,7 @@ entries:
     - https://cnpst.github.io/charts/zcp-registry-0.2.0.tgz
     version: 0.2.0
   - appVersion: 1.4.0
-    created: 2018-09-16T15:37:21.439429862+09:00
+    created: 2018-10-11T18:47:14.5901054+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
     engine: gotpl
@@ -112,7 +150,27 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2018-09-16T15:37:21.441800876+09:00
+    created: 2018-10-11T18:47:14.6031054+09:00
+    description: Keycloak Proxy supports Single Sign-On with Keycloak
+    digest: d096b92e32a5ffb5dbf5941a01d993f3136526a9b945975816a0fe94d6ff1a1e
+    home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
+    icon: http://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+    keywords:
+    - authentication
+    - sso
+    - reverseproxy
+    maintainers:
+    - email: ysj188cm@gmail.com
+      name: yunsangjun
+    name: zcp-sso
+    sources:
+    - https://github.com/YunSangJun/charts/tree/master/incubator/keycloak-proxy
+    urls:
+    - https://cnpst.github.io/charts/zcp-sso-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: 3.4.2.Final
+    created: 2018-10-11T18:47:14.6021054+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -133,11 +191,11 @@ entries:
   zcp-tools-backup:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-09-16T15:37:21.442125737+09:00
+    created: 2018-10-11T18:47:14.6071054+09:00
     description: A Helm chart for Backup
-    digest: b269892997a83f28e26d5122e6168c25898050da19ca2d003665042d561c29e7
+    digest: 29997f81674482ca0afc8c50f9fd1444d987658300fb281b53c0ebf4b9603338
     name: zcp-tools-backup
     urls:
     - https://cnpst.github.io/charts/zcp-tools-backup-1.0.0.tgz
     version: 1.0.0
-generated: 2018-09-16T15:37:21.434535518+09:00
+generated: 2018-10-11T18:47:14.5761054+09:00
