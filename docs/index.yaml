@@ -17,7 +17,7 @@ entries:
     sources:
     - https://github.com/justwatchcom/elasticsearch_exporter
     urls:
-    - https://cnpst.github.io/charts/elasticsearch-exporter-0.1.1.tgz
+    - https://cnpst.github.io/charts/elasticsearch-exporter-1.0.0.tgz
     version: 0.1.1
   zcp-catalog:
   - apiVersion: v1
