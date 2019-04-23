@@ -12,3 +12,6 @@
 - Source Code : https://github.com/cnpst/zcp-sso
 - Guide : https://github.com/cnpst/charts/blob/master/docs/guide/zcp-sso.md
 
+## Elasticsearch Exporter
+- Source Code : https://github.com/cnpst/elasticsearch-exporter
+- Guide : https://github.com/cnpst/charts/blob/master/docs/guide/elasticsearch-exporter.md
