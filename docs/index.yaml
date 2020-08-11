@@ -3,7 +3,7 @@ entries:
   elasticsearch-exporter:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-11T18:31:15.5140381+09:00
+    created: 2020-08-12T00:41:36.948913714+09:00
     description: Elasticsearch stats exporter for Prometheus
     digest: f4a06fe2213466c6bf798ae2b5edb6a9e532f532ae85dfda123fdf21e7d987db
     keywords:
@@ -21,7 +21,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-11T18:31:15.51286335+09:00
+    created: 2020-08-12T00:41:36.948536431+09:00
     description: Elasticsearch stats exporter for Prometheus
     digest: d6a31bfd939c292d519b809807e62ffb700f650ae56d35109f5412848d7b3558
     keywords:
@@ -39,7 +39,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-11T18:31:15.510671765+09:00
+    created: 2020-08-12T00:41:36.94815435+09:00
     description: Elasticsearch stats exporter for Prometheus
     digest: 05d9d3a94fb06399b9ee152040f280224dc8efd513b4ad8cc84a8355a5e66f96
     keywords:
@@ -57,7 +57,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-11T18:31:15.509734623+09:00
+    created: 2020-08-12T00:41:36.947755282+09:00
     description: Elasticsearch stats exporter for Prometheus
     digest: bde7b657d333af2b8b319e6a7bde32f22c4c96953d1890e6852a875d5c51d2b2
     keywords:
@@ -76,7 +76,7 @@ entries:
   zcp-catalog:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2020-08-11T18:31:15.517974292+09:00
+    created: 2020-08-12T00:41:36.950782699+09:00
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 4ca3410579fbae3f7236beb3bd5d57f7b8cc245bcca5000b310ddddad7a9e29d
     home: https://github.com/kubernetes-helm/monocular
@@ -91,7 +91,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2020-08-11T18:31:15.51606006+09:00
+    created: 2020-08-12T00:41:36.949830904+09:00
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 7ae6072bb023944ff2aa9ade68bb2ef08933ed72f4d7ae352bb15d872b0b9386
     home: https://github.com/kubernetes-helm/monocular
@@ -107,7 +107,7 @@ entries:
   zcp-gitea:
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2020-08-11T18:31:15.522610342+09:00
+    created: 2020-08-12T00:41:36.952695083+09:00
     description: Gitea - Git with a cup of tea
     digest: bf3950139dcc1c6a802d5a8f724a7433cf6001efffecdf1d90fc339d3a424757
     home: https://github.com/go-gitea/gitea
@@ -120,7 +120,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2020-08-11T18:31:15.520658204+09:00
+    created: 2020-08-12T00:41:36.951712467+09:00
     description: Gitea - Git with a cup of tea
     digest: f9cec764bd45af7a4f81b545e52dc79be039101ac2320c78cbb4fe5817a61dc2
     home: https://github.com/go-gitea/gitea
@@ -133,7 +133,7 @@ entries:
     version: 0.6.0
   zcp-registry:
   - appVersion: 1.5.0
-    created: 2020-08-11T18:31:15.531721441+09:00
+    created: 2020-08-12T00:41:36.960815742+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: afdabfa608c7f35f9c05bb5eefe39d9271701c4e0d7c5a2f8b1ac42e4cfd3282
     engine: gotpl
@@ -156,7 +156,7 @@ entries:
     - https://cnpst.github.io/charts/zcp-registry-1.0.0.tgz
     version: 1.0.0
   - appVersion: 1.5.0
-    created: 2020-08-11T18:31:15.528402809+09:00
+    created: 2020-08-12T00:41:36.958759072+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: a4c8bc60d9433ba32d3fc5d3913ec9f5372ef014727db142ccd947c14b8fcea6
     engine: gotpl
@@ -179,7 +179,7 @@ entries:
     - https://cnpst.github.io/charts/zcp-registry-0.2.0.tgz
     version: 0.2.0
   - appVersion: 1.4.0
-    created: 2020-08-11T18:31:15.525705453+09:00
+    created: 2020-08-12T00:41:36.955444679+09:00
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
     engine: gotpl
@@ -204,7 +204,27 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2020-08-11T18:31:15.533526686+09:00
+    created: 2020-08-12T00:41:36.96231041+09:00
+    description: Keycloak Proxy supports Single Sign-On with Keycloak
+    digest: 3acd1c0b511070ed17eaddf6480a2d3d1bb7b6046d1aad81afcf766c6e7ed23b
+    home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
+    icon: http://www.keycloak.org/resources/images/keycloak_logo_480x108.png
+    keywords:
+    - authentication
+    - sso
+    - reverseproxy
+    maintainers:
+    - email: ysj188cm@gmail.com
+      name: yunsangjun
+    name: zcp-sso
+    sources:
+    - https://github.com/YunSangJun/charts/tree/master/incubator/keycloak-proxy
+    urls:
+    - https://cnpst.github.io/charts/zcp-sso-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: 3.4.2.Final
+    created: 2020-08-12T00:41:36.961758084+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: d096b92e32a5ffb5dbf5941a01d993f3136526a9b945975816a0fe94d6ff1a1e
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -224,7 +244,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2020-08-11T18:31:15.532575072+09:00
+    created: 2020-08-12T00:41:36.961222487+09:00
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -245,7 +265,7 @@ entries:
   zcp-tools-backup:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-08-11T18:31:15.535123562+09:00
+    created: 2020-08-12T00:41:36.96308146+09:00
     description: A Helm chart for Backup
     digest: 9c1fd117601875ffcf17e085be2454b26efb44eb0746d123e07d3c6d7e034617
     name: zcp-tools-backup
@@ -254,11 +274,11 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-08-11T18:31:15.534312864+09:00
+    created: 2020-08-12T00:41:36.962699765+09:00
     description: A Helm chart for Backup
     digest: 29997f81674482ca0afc8c50f9fd1444d987658300fb281b53c0ebf4b9603338
     name: zcp-tools-backup
     urls:
     - https://cnpst.github.io/charts/zcp-tools-backup-1.0.0.tgz
     version: 1.0.0
-generated: 2020-08-11T18:31:15.508502335+09:00
+generated: 2020-08-12T00:41:36.94703625+09:00
