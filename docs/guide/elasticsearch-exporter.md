@@ -1,4 +1,4 @@
-# ZCP Catalog
+# ZCP Elasticsearch exporter
 
 ## Helm package
 
