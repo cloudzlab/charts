@@ -3,7 +3,7 @@ entries:
   elasticsearch-exporter:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-12T00:41:36.948913714+09:00
+    created: "2020-08-19T14:31:54.44107+09:00"
     description: Elasticsearch stats exporter for Prometheus
     digest: f4a06fe2213466c6bf798ae2b5edb6a9e532f532ae85dfda123fdf21e7d987db
     keywords:
@@ -21,7 +21,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-12T00:41:36.948536431+09:00
+    created: "2020-08-19T14:31:54.440639+09:00"
     description: Elasticsearch stats exporter for Prometheus
     digest: d6a31bfd939c292d519b809807e62ffb700f650ae56d35109f5412848d7b3558
     keywords:
@@ -39,7 +39,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-12T00:41:36.94815435+09:00
+    created: "2020-08-19T14:31:54.440178+09:00"
     description: Elasticsearch stats exporter for Prometheus
     digest: 05d9d3a94fb06399b9ee152040f280224dc8efd513b4ad8cc84a8355a5e66f96
     keywords:
@@ -57,7 +57,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2020-08-12T00:41:36.947755282+09:00
+    created: "2020-08-19T14:31:54.439754+09:00"
     description: Elasticsearch stats exporter for Prometheus
     digest: bde7b657d333af2b8b319e6a7bde32f22c4c96953d1890e6852a875d5c51d2b2
     keywords:
@@ -76,7 +76,11 @@ entries:
   zcp-catalog:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2020-08-12T00:41:36.950782699+09:00
+    created: "2020-08-19T14:31:54.443946+09:00"
+    dependencies:
+    - name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.4.17
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 4ca3410579fbae3f7236beb3bd5d57f7b8cc245bcca5000b310ddddad7a9e29d
     home: https://github.com/kubernetes-helm/monocular
@@ -91,7 +95,11 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: v0.6.2
-    created: 2020-08-12T00:41:36.949830904+09:00
+    created: "2020-08-19T14:31:54.442662+09:00"
+    dependencies:
+    - name: mongodb
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.4.17
     description: Monocular is a search and discovery front end for Helm Charts Repositories.
     digest: 7ae6072bb023944ff2aa9ade68bb2ef08933ed72f4d7ae352bb15d872b0b9386
     home: https://github.com/kubernetes-helm/monocular
@@ -105,9 +113,44 @@ entries:
     - https://cnpst.github.io/charts/zcp-catalog-0.5.2.tgz
     version: 0.5.2
   zcp-gitea:
+  - apiVersion: v2
+    appVersion: 1.11.5
+    created: "2020-08-19T14:31:54.449995+09:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com
+      tags:
+      - mariadb
+      version: 7.3.0
+    description: Git with a cup of tea
+    digest: 022b21571202c12e979d73dc19f02a3d2f37b76376f414ca7ed086d6a56c1a16
+    icon: https://docs.gitea.io/images/gitea.png
+    keywords:
+    - git
+    - issue tracker
+    - code review
+    - wiki
+    - gitea
+    - gogs
+    maintainers:
+    - email: charlie@charliedrage.com
+      name: Charlie Drage
+    name: zcp-gitea
+    sources:
+    - https://github.com/go-gitea/gitea
+    - https://hub.docker.com/r/gitea/gitea/
+    urls:
+    - https://cnpst.github.io/charts/zcp-gitea-1.3.3.tgz
+    version: 1.3.3
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2020-08-12T00:41:36.952695083+09:00
+    created: "2020-08-19T14:31:54.447269+09:00"
+    dependencies:
+    - condition: postgresql.install
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 0.14.3
     description: Gitea - Git with a cup of tea
     digest: bf3950139dcc1c6a802d5a8f724a7433cf6001efffecdf1d90fc339d3a424757
     home: https://github.com/go-gitea/gitea
@@ -120,7 +163,12 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.4"
-    created: 2020-08-12T00:41:36.951712467+09:00
+    created: "2020-08-19T14:31:54.445336+09:00"
+    dependencies:
+    - condition: postgresql.install
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 0.14.3
     description: Gitea - Git with a cup of tea
     digest: f9cec764bd45af7a4f81b545e52dc79be039101ac2320c78cbb4fe5817a61dc2
     home: https://github.com/go-gitea/gitea
@@ -132,11 +180,18 @@ entries:
     - https://cnpst.github.io/charts/zcp-gitea-0.6.0.tgz
     version: 0.6.0
   zcp-registry:
-  - appVersion: 1.5.0
-    created: 2020-08-12T00:41:36.960815742+09:00
+  - apiVersion: v1
+    appVersion: 1.5.0
+    created: "2020-08-19T14:31:54.459843+09:00"
+    dependencies:
+    - name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.9.1
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 3.2.5
     description: An Enterprise-class Docker Registry by VMware
     digest: afdabfa608c7f35f9c05bb5eefe39d9271701c4e0d7c5a2f8b1ac42e4cfd3282
-    engine: gotpl
     home: https://github.com/vmware/harbor
     icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
     keywords:
@@ -155,11 +210,18 @@ entries:
     urls:
     - https://cnpst.github.io/charts/zcp-registry-1.0.0.tgz
     version: 1.0.0
-  - appVersion: 1.5.0
-    created: 2020-08-12T00:41:36.958759072+09:00
+  - apiVersion: v1
+    appVersion: 1.5.0
+    created: "2020-08-19T14:31:54.456848+09:00"
+    dependencies:
+    - name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.9.1
+    - name: redis
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 3.2.5
     description: An Enterprise-class Docker Registry by VMware
     digest: a4c8bc60d9433ba32d3fc5d3913ec9f5372ef014727db142ccd947c14b8fcea6
-    engine: gotpl
     home: https://github.com/vmware/harbor
     icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
     keywords:
@@ -178,11 +240,15 @@ entries:
     urls:
     - https://cnpst.github.io/charts/zcp-registry-0.2.0.tgz
     version: 0.2.0
-  - appVersion: 1.4.0
-    created: 2020-08-12T00:41:36.955444679+09:00
+  - apiVersion: v1
+    appVersion: 1.4.0
+    created: "2020-08-19T14:31:54.452993+09:00"
+    dependencies:
+    - name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 0.9.1
     description: An Enterprise-class Docker Registry by VMware
     digest: cc038f0759b820500394070476c472cab7226a172b4e24aa01674bc7ddc404f2
-    engine: gotpl
     home: https://github.com/vmware/harbor
     icon: https://github.com/vmware/harbor/blob/master/docs/img/harbor_logo.png
     keywords:
@@ -204,7 +270,7 @@ entries:
   zcp-sso:
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2020-08-12T00:41:36.96231041+09:00
+    created: "2020-08-19T14:31:54.461509+09:00"
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: 3acd1c0b511070ed17eaddf6480a2d3d1bb7b6046d1aad81afcf766c6e7ed23b
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -224,7 +290,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2020-08-12T00:41:36.961758084+09:00
+    created: "2020-08-19T14:31:54.460898+09:00"
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: d096b92e32a5ffb5dbf5941a01d993f3136526a9b945975816a0fe94d6ff1a1e
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -244,7 +310,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: 3.4.2.Final
-    created: 2020-08-12T00:41:36.961222487+09:00
+    created: "2020-08-19T14:31:54.460308+09:00"
     description: Keycloak Proxy supports Single Sign-On with Keycloak
     digest: c6006c54478cd304422656ad7eb9ff480705ad724de34aec2511ffc6eae93647
     home: https://www.keycloak.org/docs/3.3/server_installation/topics/proxy.html
@@ -265,7 +331,7 @@ entries:
   zcp-tools-backup:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-08-12T00:41:36.96308146+09:00
+    created: "2020-08-19T14:31:54.462551+09:00"
     description: A Helm chart for Backup
     digest: 9c1fd117601875ffcf17e085be2454b26efb44eb0746d123e07d3c6d7e034617
     name: zcp-tools-backup
@@ -274,11 +340,11 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-08-12T00:41:36.962699765+09:00
+    created: "2020-08-19T14:31:54.462038+09:00"
     description: A Helm chart for Backup
     digest: 29997f81674482ca0afc8c50f9fd1444d987658300fb281b53c0ebf4b9603338
     name: zcp-tools-backup
     urls:
     - https://cnpst.github.io/charts/zcp-tools-backup-1.0.0.tgz
     version: 1.0.0
-generated: 2020-08-12T00:41:36.94703625+09:00
+generated: "2020-08-19T14:31:54.43906+09:00"
